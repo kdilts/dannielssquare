@@ -1,5 +1,14 @@
 <html>
 	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('.trigger').on('click', function() {
+					$(this).toggleClass('clicked');
+				});
+			});
+		</script>
+
 		<style>
 			body {
 				padding: 50px;
@@ -28,14 +37,11 @@
 				-webkit-transform: translate(200px, 150px) rotate(20deg);
 				transform: translate(200px, 150px) rotate(20deg);
 			}
+
 		</style>
-		<script type="text/javascript">
-			$('.trigger').on('click', function(){
-				$(this).toggleClass('clicked');
-			});
-		</script>
 	</head>
 	<body>
+		<!-- example from: http://codepen.io/anon/pen/YGooNZ -->
 		<div class="trigger">
 			<div class="box"></div>
 		</div>
